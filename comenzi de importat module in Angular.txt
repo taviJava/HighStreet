@@ -1,0 +1,84 @@
+https://mdbootstrap.com/docs/angular/getting-started/quick-start/
+
+https://github.com/ng-select/ng-select/tree/master/src/demo/app/examples      - site de unde inveti lucruri
+
+npm install jquery -- save   //  pentru instala jquery , alea cu $
+
+ng add @ng-bootstrap/ng-bootstrap
+
+npm install @angular/cdk --save
+
+npm install ng-image-slider --save
+
+in app module. ts: adaugi: NgImageSliderModule,
+
+npm install angular-bootstrap-md --save
+
+npm install --save @ng-select/ng-select
+
+ng generate module material-design
+
+npm i ng2-search-filter --save
+
+npm install ngx-pagination --save
+
+npm install ng-multiselect-dropdown
+
+ng add @angular/material
+
+npm install font-awesome@4.7.0
+
+npm install hammerjs --save
+
+npm install ngx-gallery --save     pt galerie slide poze
+
+npm install ng-image-slider  pt galerie
+
+npm install @agm/core   pt google map
+
+
+npm i @angular/material
+
+npm i @ngx-gallery/core
+
+// pt harta
+
+npm install --save angular-osm
+npm install ol
+npm install --save-dev parcel-bundler
+npm install @types/openlayers --save
+
+
+
+https://stackblitz.com/edit/ngx-gallery-v2?file=app%2Fapp.component.html
+
+npm install -–save chart.js@2.5.0 @types/chart.js @fortawesome/fontawesome-free hammerjs animate.css
+Dupa ce am instalat fontawsome ne ducem pe file-ul: angular.json la styles adaugam: 
+              "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/regular.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
+              "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
+              "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
+              "node_modules/animate.css/animate.css"
+
+apoi ne ducem in file-ul: styles.css si adaugam:
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+https://www.npmjs.com/package/ng-multiselect-dropdown
+
+
+
+And then include it in your module (see app.module.ts):
+
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+// ...
+ 
+@NgModule({
+  imports: [
+    NgMultiSelectDropDownModule.forRoot()
+    // ...
+  ]
+  // ...
+})
+export class AppModule {}
