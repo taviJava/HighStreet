@@ -10,13 +10,16 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import { LocationAddComponent } from './location/components/location-add/location-add.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DistanceAddComponent } from './distance/components/distance-add/distance-add.component';
+import {NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddLocationComponent,
     LocationListComponent,
-    LocationAddComponent
+    LocationAddComponent,
+    DistanceAddComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import {HttpClientModule} from '@angular/common/http';
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgMultiSelectDropDownModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
