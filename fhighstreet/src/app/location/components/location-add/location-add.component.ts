@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from 'src/app/location/model/location';
-import { LocationService } from '../../service/location.service';
-import { Router } from '@angular/router';
+import {Location} from '../../model/location';
+import {LocationService} from '../../service/location.service';
+import {Router} from '@angular/router';
+
 @Component({
-  selector: 'app-add-location',
-  templateUrl: './add-location.component.html',
-  styleUrls: ['./add-location.component.css']
+  selector: 'app-location-add',
+  templateUrl: './location-add.component.html',
+  styleUrls: ['./location-add.component.css']
 })
-export class AddLocationComponent implements OnInit {
+export class LocationAddComponent implements OnInit {
   location: Location = new Location();
-  name1: any;
   constructor(private locationService: LocationService,
               private router: Router) { }
 
@@ -20,7 +20,7 @@ export class AddLocationComponent implements OnInit {
   add(){
     this.locationService.save(this.location).subscribe(result =>{
         this.router.navigate(['']);
-    }
+      }
     );
   }
 }

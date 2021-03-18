@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Distance } from 'src/app/distance/model/distance';
+import { Location } from 'src/app/location/model/location';
 @Injectable({
   providedIn: 'root'
 })
 export class LocationService {
   private stringUrl: string;
   constructor(private http: HttpClient) {
-    this.stringUrl = 'http://localhost:8080/location'
+    this.stringUrl = 'http://localhost:8080/location';
   }
   public getAll(): Observable<any>{
-    return this.http.get<Observable<any>>(this.stringUrl)
+    return this.http.get<Observable<any>>(this.stringUrl);
   }
 
   // tslint:disable-next-line:typedef

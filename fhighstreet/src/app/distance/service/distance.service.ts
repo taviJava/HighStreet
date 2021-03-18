@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Distance } from '../model/distance';
 import { HttpClient } from '@angular/common/http';
+import {Distance} from '../model/distance';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +9,10 @@ import { HttpClient } from '@angular/common/http';
 export class DistanceService {
   private stringUrl: string;
   constructor(private http: HttpClient) {
-    this.stringUrl = 'http://localhost:8080/distance'
+    this.stringUrl = 'http://localhost:8080/distance';
   }
   public getAll(): Observable<any>{
-    return this.http.get<Observable<any>>(this.stringUrl)
+    return this.http.get<Observable<any>>(this.stringUrl);
   }
 
   // tslint:disable-next-line:typedef

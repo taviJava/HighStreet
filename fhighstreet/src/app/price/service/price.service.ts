@@ -9,10 +9,10 @@ import { Price } from '../model/price';
 export class PriceService {
   private stringUrl: string;
   constructor(private http: HttpClient) {
-    this.stringUrl = 'http://localhost:8080/price'
+    this.stringUrl = 'http://localhost:8080/price';
   }
   public getAll(): Observable<any>{
-    return this.http.get<Observable<any>>(this.stringUrl)
+    return this.http.get<Observable<any>>(this.stringUrl);
   }
 
   // tslint:disable-next-line:typedef
