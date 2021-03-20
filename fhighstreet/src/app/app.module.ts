@@ -12,6 +12,8 @@ import { LocationAddComponent } from './location/components/location-add/locatio
 import {HttpClientModule} from '@angular/common/http';
 import { DistanceAddComponent } from './distance/components/distance-add/distance-add.component';
 import {NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
+import { EmployeeAddComponent } from './employee/components/employee-add/employee-add.component';
+import { PriceAddComponent } from './price/components/price-add/price-add.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
     AddLocationComponent,
     LocationListComponent,
     LocationAddComponent,
-    DistanceAddComponent
+    DistanceAddComponent,
+    EmployeeAddComponent,
+    PriceAddComponent
   ],
   imports: [
     BrowserModule,

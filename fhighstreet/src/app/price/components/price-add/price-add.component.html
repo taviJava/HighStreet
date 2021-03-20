@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="card my-5">
+        <div class="card-body">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+            <tr>
+              <th class="align-middle" scope="col">#</th>
+              <th class="align-middle" scope="col">Km</th>
+              <th class="align-middle" scope="col">Start City</th>
+              <th class="align-middle" scope="col">End City</th>
+              <th class="align-middle" scope="col">Vehicle</th>
+              <th class="align-middle" scope="col">Price</th>
+              <th class="align-middle" scope="col">
+                <div class="row d-flex align-items-center">
+                  <div class="col">
+                    Operations
+                  </div>
+
+                </div>
+              </th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let veh of vehicles">
+            <tr *ngFor=" let distance of distances" >
+              <td>{{ (distances.indexOf(distance)+1)}}</td>
+              <td>{{distance.km }}</td>
+              <td > {{distance.startLocation.name}}</td>
+              <td>{{distance.endLocation.name}}</td>
+              <td>{{veh}}</td>
+              <td>
+                <div class="btn-group">
+                  <button  class="btn btn-outline-primary mx-1"> Edit </button>
+                  <button  class="btn btn-outline-danger"> Delete </button>
+
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
