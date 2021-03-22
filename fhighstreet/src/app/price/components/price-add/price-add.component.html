@@ -13,14 +13,6 @@
               <th class="align-middle" scope="col">End City</th>
               <th class="align-middle" scope="col">Vehicle</th>
               <th class="align-middle" scope="col">Price</th>
-              <th class="align-middle" scope="col">
-                <div class="row d-flex align-items-center">
-                  <div class="col">
-                    Operations
-                  </div>
-
-                </div>
-              </th>
             </tr>
             </thead>
             <tbody *ngFor="let veh of vehicles">
@@ -31,12 +23,18 @@
               <td>{{distance.endLocation.name}}</td>
               <td>{{veh}}</td>
               <td>
-                <div class="btn-group">
-                  <button  class="btn btn-outline-primary mx-1"> Edit </button>
-                  <button  class="btn btn-outline-danger"> Delete </button>
+                <form (ngSubmit)="onSubmit(distance,veh)">
 
-                </div>
+                    <input type="number" [(ngModel)]="price.value"
+                           [ngModelOptions]="{standalone: true}"
+                           class="form-control"
+                           id="value"
+                    >
+                  <button type="submit" class="btn btn-outline-primary mx-1"> Update Price </button>
+
+                </form>
               </td>
+
             </tr>
             </tbody>
           </table>

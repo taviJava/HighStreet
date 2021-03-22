@@ -14,6 +14,10 @@ import { DistanceAddComponent } from './distance/components/distance-add/distanc
 import {NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
 import { EmployeeAddComponent } from './employee/components/employee-add/employee-add.component';
 import { PriceAddComponent } from './price/components/price-add/price-add.component';
+import { Test1Component } from './test/components/test1/test1.component';
+import {IconsModule} from 'angular-bootstrap-md';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import { PriceAddComponent } from './price/components/price-add/price-add.compon
     LocationAddComponent,
     DistanceAddComponent,
     EmployeeAddComponent,
-    PriceAddComponent
+    PriceAddComponent,
+    Test1Component
   ],
   imports: [
     BrowserModule,
@@ -34,6 +39,8 @@ import { PriceAddComponent } from './price/components/price-add/price-add.compon
     ReactiveFormsModule,
     HttpClientModule,
     NgMultiSelectDropDownModule,
+    IconsModule,
+    MDBBootstrapModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

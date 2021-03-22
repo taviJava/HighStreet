@@ -27,14 +27,14 @@ export class PriceAddComponent implements OnInit {
     this.distanceService.getAll().subscribe(result =>{
       this.distances = [];
       this.distances = result;
-      for (const dist of this.distances){
-      }
     });
   }
-  getCityName(name: string): any{
-    const city = '';
-    if (name !== undefined){
-      return name;
-    }
+  // tslint:disable-next-line:typedef
+  onSubmit(distance: Distance, vehicle: string){
+    this.price.distance = distance;
+    this.price.vehicle = vehicle;
+    this.priceService.save(this.price).subscribe(result => {
+      this.ngOnInit();
+    });
   }
 }
